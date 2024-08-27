@@ -1,1 +1,38 @@
+#include <stdio.h>
 
+int main(){
+    
+    int TiposProdutos, i, quantidade;
+    char nomeProduto[50]; // Criando uma string
+    float precoUnitario, valorTotal, valorTotalDia;
+
+// Perguntando ao usuário quantos tipos de produtos foram vendidos
+    printf("Insira aqui quantos tipos de produtos foram vendidos: ");
+    scanf("%d", &TiposProdutos);
+
+// Criando um looping que repete na mesma proporção que a quantidade de tipos de produtos
+    for (i = 0; i<TiposProdutos; i++){ //incremento
+        
+        // Nome do Produto
+        printf("\nDigite o nome do %d produto: ", i+1);
+        scanf("%s", &nomeProduto);
+
+        // Quantidade vendida do produto em específico
+        printf("\nDigite a quantidade vendida de %s: ", nomeProduto);
+        scanf("%d", &quantidade);
+
+        // Valor unitário do produto
+        printf("\nDigite o valor unitario do(a) %s: ", nomeProduto);
+        scanf("%f", &precoUnitario);
+
+        // Valor total vendido do produto
+        valorTotal = precoUnitario * quantidade;
+
+        // Incremento para a soma do total de todas as vendas
+        valorTotalDia += valorTotal;
+
+        printf("\nO valor total vendido desse produto: R$%.2f\n", valorTotal);
+    }
+    printf("\nO valor total vendido no dia: R$%.2f", valorTotalDia);
+    return 0;
+}
