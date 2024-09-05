@@ -1,1 +1,21 @@
+#include <stdio.h>
 
+int main(){
+    int idade;
+    char nome[20];
+
+    printf("Digite o seu nome: ");
+    scanf("%s", &nome);
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    float meses, dias;
+
+    meses = idade * 12;
+    dias = meses * 30;
+
+    printf("%s, aproximadamente possui %.2f dias de vida", nome, dias);
+
+    return 0;
+}
