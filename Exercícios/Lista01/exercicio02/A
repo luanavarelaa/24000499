@@ -1,1 +1,18 @@
+#include <stdio.h>
 
+int main(){
+    float a, b, c;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &a);
+
+    printf("\nDigite o segundo numero: ");
+    scanf("%f", &b);
+
+    printf("\nDigite o terceiro numero: ");
+    scanf("%f", &c);
+
+    printf("\nA ordem inversa dos numeros: %.2f, %.2f, %.2f", a,b,c);
+
+    return 0;
+}
