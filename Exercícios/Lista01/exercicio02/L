@@ -1,1 +1,42 @@
+#include <stdio.h>
 
+int main(){
+
+    int valor, unidade = 0, unidade5 = 0, dezena = 0, dezena5 = 0, centena = 0;
+
+    printf("Digite o valor inteiro em reais: ");
+    scanf ("%d", &valor);
+
+
+    while (valor >= 100){
+        valor -= 100;
+        centena ++;
+    }   
+
+    while (50 <= valor && 100 > valor){
+        valor -= 50;
+        dezena5 ++;
+    }
+
+    while (10 <= valor && 50> valor){
+        valor -= 10;
+        dezena ++;
+    }
+    
+    while (5 <= valor && 10 > valor){
+        valor -= 5;
+        unidade5 ++;
+    }
+
+    while (1 <= valor && 5 > valor){
+        valor -= 1;
+        unidade ++;
+    }
+
+    printf("\nA quantidade de notas de 100: %d", centena);
+    printf("\nA quantidade de notas de 50: %d", dezena5);
+    printf("\nA quantidade de notas de 10: %d", dezena);
+    printf("\nA quantidade de notas de 5: %d", unidade5);
+    printf("\nA quantidade de moedas de 1 real: %d", unidade);
+
+}
