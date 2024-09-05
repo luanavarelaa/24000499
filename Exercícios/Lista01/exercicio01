@@ -1,1 +1,60 @@
+// A) O número é muito grande, deveria ser utilizado um float
+
+#include <stdio.h>
+
+int main(){
+    float n = 4000000000;
+    printf("%f",n);
+    
+    return 0;
+}
+
+// B) A variável deve ser declarada antes de printada. Além disso, deve ser atribuido um 
+// valor a ela.
+
+#include <stdio.h>
+
+int main(){
+    int a = (valor);
+    printf("%d",a);
+    return 0;
+}
+
+// C) Se não for utilizado \n, os números 4 e 2 serão mostrados juntos, parecendo o número 42.
+
+#include <stdio.h>
+
+int main(){
+
+    printf("\n%d", 4);
+    printf("\n%d", 2);
+    return 0;
+}
+
+//D) Não há necessidade do uso do Scanf, já que ele lê apenas valores digitados pelo usurário.
+// Além disso, a deve ter um valor.
+
+#include <stdio.h>
+
+int main(){
+
+    int a = (valor);
+    printf("%d", a);
+    return 0;
+}
+
+// ou
+
+#include <stdio.h>
+
+int main(){
+
+    int a;
+    printf("Digite um valor para a: ");
+    scanf("%d", &a);
+    printf("%d", a);
+    return 0;
+}
+
+
 
