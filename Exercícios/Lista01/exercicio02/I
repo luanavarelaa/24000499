@@ -1,1 +1,49 @@
+#include <stdio.h>
+#include <math.h>
 
+int main(){
+
+    printf("Programa para calcular as raizes de uma equacao do segundo grau");
+
+    float a, b, c;
+
+    // pegando os valores do usuário
+    printf("\nDigite o valor de a: ");
+    scanf("%f", &a);
+
+    if (a == 0) {
+        printf("O valor de a deve ser maior do que 0 para que haja uma eq. de segundo grau");
+    }
+
+    else {
+
+        printf("\nDigite o valor de b: ");
+        scanf("%f", &b);
+
+        printf("\nDigite o valor de c: ");
+        scanf("%f", &c);
+
+
+        float delta, x1, x2;
+
+        delta = pow(b,2) - (4*a*c);
+
+        if (delta < 0){
+            (printf("\nNao existem raizes reais"));
+        }
+
+        else if (delta == 0){
+
+            x1 = (-b + sqrt(delta))/(2*a);
+            printf("\nExiste apenas 1 raiz real: %.2f", x1);
+        }
+        else{
+            x1 = (-b + sqrt(delta))/(2*a);
+            x2 = (-b - sqrt(delta))/(2*a);
+
+            (printf("\nRaizes reais: %.2f, %.2f ", x1, x2));
+        }
+    }
+
+    return 0;
+}
