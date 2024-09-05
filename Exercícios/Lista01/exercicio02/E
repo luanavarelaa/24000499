@@ -1,1 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+int main(){
+    float largura, altura;
 
+    printf("Digite a largura da parede: ");
+    scanf("%f", &largura);
+
+    printf("Digite a altura da parede: ");
+    scanf("%f", &altura);
+
+    float metros_quadrados, ml, quantidade;
+
+
+    metros_quadrados = largura * altura;
+
+    ml = metros_quadrados * 300;
+
+    quantidade = ceil(ml/2000); // A função arredonda para cima.
+
+    printf("A quantidade inteira necessaria para pintar toda a parede sera: %.2f", quantidade);
+    
+    return 0;
+
+}
