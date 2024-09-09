@@ -1,1 +1,104 @@
+// Primeira opção: o valor deve ser dividido entre as 3 ações e o usuário deve informar a quantidade de cada uma que deseja compar.
+#include <stdio.h>
 
+int main(){
+
+    float acao01 = 24.13, acao02 = 11, acao03 = 38.65;
+
+    float valor_investimento, qtd01, qtd02, qtd03;
+
+    printf("Digite o valor que deseja investir: ");
+    scanf("%f", &valor_investimento);
+
+    printf("\nDigite a quantidade da 1 acao que deseja adquirir: ");
+    scanf("%f", &qtd01);
+
+    if (acao01 * qtd01 > valor_investimento){
+
+        printf("\nQuantidade da acao 1 acima do limite permitido pelo valor do investimento");
+    }
+
+    else{
+        valor_investimento = valor_investimento - (acao01*qtd01);
+        printf("Digite a quantidade da 2 acao que deseja adquirir: ");
+        scanf("%f", &qtd02);
+
+        if (acao02 * qtd02 > valor_investimento){
+            printf("\nQuantidade da acao 2 acima do limite permitido pelo valor do investimento");
+        }
+
+        else{
+            valor_investimento = valor_investimento - (acao02*qtd02);
+            printf("Digite a quantidade da 3 acao que deseja adquirir: ");
+            scanf("%f", &qtd03);
+
+            if (qtd03 * acao03 > valor_investimento){
+                printf("\nQuantidade da acao 3 acima do limite permitido pelo valor do investimento");
+            }
+
+            else{
+                
+                float DY01, DY02, DY03;
+
+                DY01 = 17.0/acao01*100;
+                DY02 = 35.0/acao02*100;
+                DY03 = 25.0/acao03*100;
+
+                float valor_investido01, valor_investido02, valor_investido03;
+
+                valor_investido01 = qtd01 * acao01;
+                valor_investido02 = qtd02 * acao02;
+                valor_investido03 = qtd03 * acao03;
+
+                float dividendos01, dividendos02, dividendos03;
+
+                dividendos01 = valor_investido01 * DY01/100;
+                dividendos02 = valor_investido02 * DY02/100;
+                dividendos03 = valor_investido03 * DY03/100;
+
+                printf("\nA quantidade de dividendos da acao 1 com %.2f acoes compradas: %.2f reais", qtd01, dividendos01);
+                printf("\nA quantidade de dividendos da acao 2 com %.2f acoes compradas: %.2f reais", qtd02, dividendos02);
+                printf("\nA quantidade de dividendos da acao 3 com %.2f acoes compradas: %.2f reais", qtd03, dividendos03);
+            }
+        }
+    }
+
+    return 0;
+}
+
+
+// Segunda opção: o programa retornará a quantidade de dividendos de cada ação para o mesmo valor.
+#include <stdio.h>
+
+int main(){
+
+    float acao01 = 24.13, acao02 = 11, acao03 = 38.65;
+
+    float valor_investimento;
+    int qtd01, qtd02, qtd03;
+
+    printf("Digite o valor que deseja investir: ");
+    scanf("%f", &valor_investimento);
+
+    if (acao01 > valor_investimento || acao02 > valor_investimento || acao03 > valor_investimento ){
+        printf("Valor de investimento menor do que o preço unitário de alguma das acoes ");
+    }
+
+    else{
+        qtd01 = int(valor_investimento / acao01);
+        qtd02 = int (valor_investimento / acao02);
+        qtd03 = int (valor_investimento / acao03);
+
+        float dividendo01 = qtd01 * 17.0;
+        float dividendo02 = qtd02 * 35.0;
+        float dividendo03 = qtd03 * 25.0;
+
+        printf("\nA quantidade de dividendos da acao 1 com %d acoes compradas: %.2f reais", qtd01, dividendo01);
+        printf("\nA quantidade de dividendos da acao 2 com %d acoes compradas: %.2f reais", qtd02, dividendo02);
+        printf("\nA quantidade de dividendos da acao 3 com %d acoes compradas: %.2f reais", qtd03, dividendo03);
+    }
+    
+
+
+    return 0;
+}
