@@ -1,1 +1,21 @@
+#include <stdio.h>
 
+int main(){
+    float primeiro_termo, numero_termos, razao;
+
+    printf("Digite o primeiro termo da progressao: ");
+    scanf("%f", &primeiro_termo);
+
+    printf("Digite o numero de termos da progressao: ");
+    scanf("%f", &numero_termos);
+
+    printf("Digite a razao da progressao: ");
+    scanf("%f", &razao);
+
+    float enesimo_termo = primeiro_termo + (numero_termos - 1) * razao;
+
+    printf("O enesimo termo dessa progressao aritmetica: %.2f", enesimo_termo);
+
+    return 0;
+
+}
