@@ -1,1 +1,107 @@
+// Resolução da prova 01 
+// Camile de Santis Marques - 24006992
+// Ellen de Assis - 24017383
+// Luana Varela Vacari - 24000499
 
+// Questão 01 - b
+
+// Questão 02 - c
+
+// Questão 03 -
+
+#include <stdio.h>
+
+int main() {
+    int opcao;
+    float preco;
+
+    printf("Escolha um plano de assinatura:\n");
+    printf("1 - Plano Básico (R$ 29,90)\n");
+    printf("2 - Plano Padrão (R$ 49,90)\n");
+    printf("3 - Plano Premium (R$ 79,90)\n");
+    printf("Digite o número da sua opção: ");
+    scanf("%d", &opcao);
+
+    switch (opcao) {
+        case 1:
+            preco = 29.90;
+            printf("Você escolheu o Plano Básico. Valor: R$ %.2f\n", preco);
+            break;
+        case 2:
+            preco = 49.90;
+            printf("Você escolheu o Plano Padrão. Valor: R$ %.2f\n", preco);
+            break;
+        case 3:
+            preco = 79.90;
+         printf("Você escolheu o Plano Premium. Valor: R$ %.2f\n", preco);
+            break;
+        default:
+            printf("Opção inválida! Por favor, escolha um plano válido.\n");
+            break;
+    }
+
+    return 0;
+}
+
+// Questão 4 - 
+
+#include <stdio.h>
+
+int main() {
+    double temperatura, umidade;
+
+    printf("Digite a temperatura interna atual (°C): ");
+    scanf("%lf", &temperatura);
+    printf("Digite a umidade relativa do ar (%%): ");
+    scanf("%lf", &umidade);
+
+    if (temperatura < 18 || umidade > 70) {
+        printf("Aquecimento Ligado e Desumidificador Ativado.\n");
+    } 
+    else if ((temperatura >= 18 && temperatura <= 22) && (umidade >= 30 && umidade <= 50)) {
+        printf("Condições ideais - Sistema em modo de economia.\n");
+    } 
+    else if (temperatura > 22 && umidade < 30) {
+        printf("Ar Condicionado Ligado e Umidificador Ativado.\n");
+    } 
+    else {
+        printf("Verificar Sistema - Ajustes Manuais Necessários.\n");
+    }
+
+    return 0;
+}
+
+// Questão 5 - 
+
+#include <stdio.h>
+
+int main() {
+    int posicao;
+    int pontuacao = 0;
+
+    printf("Digite a posição do corredor na corrida: ");
+    scanf("%d", &posicao);
+
+    if (posicao == 1) {
+        pontuacao = 10;
+    } 
+    else if (posicao == 2) {
+        pontuacao = 8;
+    } 
+    else if (posicao == 3) {
+        pontuacao = 6;
+    } 
+    else if (posicao == 4) {
+        pontuacao = 4;
+    } 
+    else if (posicao == 5) {
+        pontuacao = 2;
+    } 
+    else {
+        pontuacao = 0;
+    }
+
+    printf("\nA pontuação do corredor é: %d pontos", pontuacao);
+
+    return 0;
+}
