@@ -1,0 +1,28 @@
+# include <stdio.h>
+
+int main(){
+    int comando;
+    char inicio;
+
+    do{
+        printf("Selecione um comando: ");// 1 para ligar lâmpada, 2 para tocar som e 3 para mover o braço
+        scanf("%d", &comando);
+
+        switch (comando){
+            case 1:
+                printf ("Lâmpada ligada...");
+                break;
+            case 2:
+                printf("Tocando som...");
+                break;
+            case 3:
+                printf("Movendo braço...");
+                break;
+        }
+
+        printf("\nDeseja inserir mais comandos? (S/N): ");
+        scanf(" %c", &inicio);    
+    } while (inicio == 'S' || inicio == 's');
+
+
+}
