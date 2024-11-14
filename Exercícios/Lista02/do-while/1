@@ -1,1 +1,28 @@
+#include <stdio.h>
 
+int main(){
+    char comando;
+
+
+    do{
+        printf("\nInsira um comando: "); // w para cima, s para baixo, d para direita e a para a esquerda.
+        scanf(" %c", &comando);
+
+
+        if (comando == 'W' || comando == 'w'){
+            printf("\nMovendo para frente...");
+        }
+
+        else if (comando == 'S' || comando == 's'){
+            printf("\nMovendo para trás...");
+        }
+
+        else if (comando == 'D' || comando == 'd'){
+            printf("\nMovendo para direita...");
+        }
+
+        else if (comando == 'A' || comando == 'a') {
+            printf("\nMovendo para esquerda...");
+        } 
+    } while (comando != 'e'); // 0 sai do programa
+}
