@@ -1,1 +1,28 @@
+#include <stdio.h>
 
+int main(){
+    float temperatura;
+    char inicio;
+
+    printf ("Programa para monitorar temperatura");
+    printf("\nDeseja iniciar o programa? (S/N):");
+    scanf(" %c", &inicio);
+
+    do {
+        printf ("Digite a temperatura atual em graus celsius: ");
+        scanf("%f", &temperatura);
+
+        if (temperatura >= 20 || temperatura <= 25){
+            printf("\nTmeperatura dentro do ideal");
+        }
+
+        else{
+            printf("\nTmeperatura fora do ideal");
+        }
+        
+        printf("\n\nDeseja inserir outro valor? (S/N):");
+        scanf(" %c", &inicio);
+    } while (inicio == 'S'|| inicio == 's');
+
+    printf("\nObrigado por utilizar o programa");    
+}
