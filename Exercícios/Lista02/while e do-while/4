@@ -1,1 +1,16 @@
+# include <stdio.h>
 
+int main(){
+    float valor_minimo;
+
+    printf("Digite o valor do deposito inicial: ");
+    scanf("%f", &valor_minimo);
+    
+    while (valor_minimo < 500){
+        printf("\nO valor minimo de deposito deve ser 500 reais");
+        printf("\nDigite o valor do deposito inicial: ");
+        scanf("%f", &valor_minimo);
+    }
+
+    printf ("Valor depositado: %.2f", valor_minimo);
+}
