@@ -1,0 +1,31 @@
+# include <stdio.h>
+
+int main(){
+    float nivel_combustivel;
+
+    printf("\nInforme o nível de combustível do carro em porcentagem: ");
+    scanf("%f", &nivel_combustivel);
+
+    while (nivel_combustivel != 100){
+        if (nivel_combustivel > 100){
+            printf("\nO nível máximo deve ser de 100");
+        }
+
+        else if (nivel_combustivel >= 15){
+            printf("\nNão é necessário reabastecer");
+        }
+
+        else if( nivel_combustivel >= 0){
+            printf("\nReabasteça o veículo");
+        }
+
+        else{
+            printf("\nO valor mínimo é 0");
+        }
+
+        printf("\nInforme o nível de combustível do carro em porcentagem: ");
+        scanf("%f", &nivel_combustivel);
+    }
+
+    printf ("O tanque está cheio");
+}
