@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int nivel_bateria;
+
+    do{
+        printf ("Insira o nivel da bateria: ");
+        scanf("%d", &nivel_bateria);
+    } while (nivel_bateria < 20);
+    printf("Bateria acima de 20 por cento");
+}
