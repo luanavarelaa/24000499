@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main (){
+    float distancia;
+    char inicio;
+
+    do{
+        do {
+            printf("Insira a distancia atual em cm: ");
+            scanf("%f", &distancia);
+        } while (distancia >= 10);
+
+        printf("Distancia capturada: %.2f", distancia);
+
+        printf("\nDeseja reeiniciar o programa? (S/N): ");
+        scanf(" %c", &inicio);
+    } while (inicio != 'N' && inicio != 'n'); 
+}
