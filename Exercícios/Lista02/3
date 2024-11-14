@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+    int passos_total = 0, passos;
+
+    do{
+        printf ("\nDigite a quantidade de passos dados no último intervalo: ");
+        scanf("%d", &passos);
+        passos_total = passos_total + passos;
+        printf("\n%d passos", passos_total);
+    } while (passos_total < 10000);
+
+    printf ("\nParabéns você atingiu a meta diária com %d passos!", passos_total);
+}
