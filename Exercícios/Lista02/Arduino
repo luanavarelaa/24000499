@@ -1,0 +1,47 @@
+1) int cameraData[10]
+
+2) A função armazena, na posição de índice 3, o valor lido da porta lógica A01
+
+3) float temperaturas[] = {25.5, 26.0, 24.8, 27.3, 26.5};
+
+4) A função printa no monitor serial os valores armazenados dentro do vetor ledPins.
+
+    Exemplo: 
+    Se o vetor ledPins[] = {2, 4, 6, 8}
+    Printa os valores 2, 4, 6 e 8.
+
+5) 
+  int ledPins[] = {2, 4, 6, 8}; 
+
+  void setup() {
+    Serial.begin(9600); 
+  }
+
+  void loop() {
+    for (int i = 0; i < 4; i++) {
+        Serial.println(ledPins[i]); 
+    }
+    delay(1000); 
+  }
+
+6) 
+  int randomValues[5];
+
+  void setup() {
+    Serial.begin(9600);
+  
+    for (int i = 0; i < 5; i++) {
+        randomValues[i] = random(1, 51); 
+        Serial.println(randomValues[i]); 
+    }
+  }
+
+  void loop() {
+    // Nada aqui
+  }
+
+7) Percorre todos os elementos do vetor sensorReadings até que um seja igual a 150.
+
+8) A função sizeof(sensorData) retorna o tamanho total do vetor em bytes, já sizeof(sensorData[0], retorna o tamanho em
+  bytes de um único elemento. Sendo assim, dividindo o tamanho total pelo de um elemento, é possível obter a quantidade
+  de elementos de um vetor.
