@@ -45,3 +45,36 @@
 8) A função sizeof(sensorData) retorna o tamanho total do vetor em bytes, já sizeof(sensorData[0], retorna o tamanho em
   bytes de um único elemento. Sendo assim, dividindo o tamanho total pelo de um elemento, é possível obter a quantidade
   de elementos de um vetor.
+
+PROBLEMAS
+
+4)
+a) No primeiro momento, a temperatura oi de 22 graus e oscilou entre 25, 23, 21 e terminou com 24 graus.
+b) 40,4
+c) No 3 momento
+
+d) 
+
+int ambientData[3][5] = {
+  {22, 25, 23, 21, 24},
+  {45, 38, 42, 40, 37},
+  {400, 380, 420, 410, 390}
+};
+
+void setup() {
+  Serial.begin(9600);
+  float temperatura_total = 0;
+
+  for (int i = 0; i < 5; i++){
+    temperatura_total += ambientData[0][i];
+  }
+
+  float media_temperatura = (temperatura_total / 5);
+
+  Serial.println("Média da temperatura: ");
+  Serial.println(media_temperatura);
+}
+void loop() {
+
+}
+
